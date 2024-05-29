@@ -1,7 +1,6 @@
 services:
   mx-chain-keys-monitor-go:
-    image: mx-chain-keys-monitor-go
-    build: '.'
+    image: mx-chain-keys-monitor-go:latest
     container_name: mx-chain-keys-monitor-go
     volumes:
       - ./cmd/monitor/config/example/config.toml:/config.toml:ro
