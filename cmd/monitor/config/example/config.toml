@@ -4,8 +4,8 @@
     [General.SystemSelfCheck]
         Enabled = true
         DayOfWeek = "every day" # can also be "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" and "Sunday"
-        Hour = 12 # valid interval 0-23
-        Minute = 00 # valid interval 0-59
+        Hour = 0 # valid interval 0-23
+        Minute = 1 # valid interval 0-59
         PollingIntervalInSec = 30
     [General.Logs]
         LogFileLifeSpanInMB = 1024 # 1GB
@@ -39,11 +39,12 @@
 
 [[BLSKeysMonitoring]]
     AlarmDeltaRatingDrop = 1.0 # maximum Rating-TempRating value that will trigger an alarm, for the public testnet might use a higher value (2 or 3)
-    Name = "network 1"
-    ApiURL = "API URL 1"
-    ExplorerURL = ""
-    PollingIntervalInSeconds = 300  # 5 minutes
-    ListFile = "./config/network1.list"
+    Name = "mainnet"
+    ApiURL = "https://api.multiversx.com"
+    ExplorerURL = "https://explorer.multiversx.com"
+    PollingIntervalInSeconds = 20  # 5 minutes
+    # ListFile = "./config/network1.list"
+    ListFile = "/network1.list"
 
 # To another networks, un-comment below and add more sections like this
 #[[BLSKeysMonitoring]]
